@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import { Field, FieldLabel, FieldHint, FieldError, FieldInput, FieldAction } from '@strapi/design-system/Field';
+import { Field, FieldLabel,  FieldInput } from '@strapi/design-system/Field';
 import { Textarea } from '@strapi/design-system/Textarea';
-import { Button } from '@strapi/design-system/Button';
 import { Box } from '@strapi/design-system/Box';
 import Seleccionar from './elements/selectores';
+import { Button } from '@strapi/design-system/Button';
 import axios from 'axios';
 const qs = require('qs');
 
@@ -175,6 +175,8 @@ function Curso(){
       soloCuestionarios:false
   })
 
+  console.log(cargarValores)
+
   }
    
 
@@ -193,7 +195,7 @@ function Curso(){
           <FieldLabel>Seleccione categorias</FieldLabel>
           <Seleccionar padres={padres} setValores={setValores} valores={valores}/>
           
-        <Button onClick={enviarDatos}>Añadir</Button>
+        <Button onClick={añadirItems}>Añadir</Button>
          </Box>
         </>
     )

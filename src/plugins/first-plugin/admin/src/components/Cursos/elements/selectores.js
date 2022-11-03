@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import { Select, Option } from '@strapi/design-system/Select';
 import { Stack } from '@strapi/design-system/Stack';
 import { GridLayout } from '@strapi/design-system/Layout';
+import { Button } from '@strapi/design-system/Button';
+import { Box } from '@strapi/design-system/Box';
+import { FieldLabel } from '@strapi/design-system/Field';
 
 
 
@@ -74,7 +77,7 @@ return(
                 onClear={() => setValores({...valores, value2:undefined})}
                 clearLabel="Clear the meal"
                 error={error}
-                value={value2}
+                value={valores.value2}
                 onChange={(e)=>{setValores({...valores, value2:e})}} 
                 disabled={disabled} >
                   {
@@ -117,7 +120,7 @@ return(
                     onClear={() => setValores({...valores, value4:undefined})} 
                     clearLabel="Clear the meal" 
                     error={error} 
-                    value={value4} 
+                    value={valores.value4} 
                     onChange={(e)=>{setValores({...valores, value4:e})}} 
                     disabled={disabled} >
                   {

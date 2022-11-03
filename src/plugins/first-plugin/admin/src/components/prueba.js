@@ -28,7 +28,7 @@ function Prueba(){
         useEffect(async ()=>
         {
             const response = await axios.get('http://localhost:1337/api/categorias')
-            console.log(response, 'que me trae esto');
+          
     
     
             
