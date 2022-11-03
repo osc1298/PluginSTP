@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoria_3s",
+  "info": {
+    "singularName": "categoria-3",
+    "pluralName": "categoria-3s",
+    "displayName": "Categoria 3",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "categoria_2": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria-2.categoria-2",
+      "inversedBy": "categoria_3_s"
+    },
+    "temarios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::temario.temario",
+      "mappedBy": "categoria_3"
+    },
+    "cuestionarios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cuestionario.cuestionario",
+      "mappedBy": "categoria_3"
+    }
+  }
+}

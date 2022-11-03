@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos",
+  "info": {
+    "singularName": "curso",
+    "pluralName": "cursos",
+    "displayName": "Curso",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "apuntes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::apunte.apunte",
+      "mappedBy": "cursos"
+    },
+    "cuestionarios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cuestionario.cuestionario",
+      "mappedBy": "cursos"
+    },
+    "temarios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::temario.temario",
+      "mappedBy": "cursos"
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "categoria_2": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria-2.categoria-2",
+      "inversedBy": "cursos"
+    }
+  }
+}

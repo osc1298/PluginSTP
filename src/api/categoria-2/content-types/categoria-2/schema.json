@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoria_2s",
+  "info": {
+    "singularName": "categoria-2",
+    "pluralName": "categoria-2s",
+    "displayName": "Categoria 2",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "categoria_3_s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria-3.categoria-3",
+      "mappedBy": "categoria_2"
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "categoria_2_s"
+    },
+    "cursos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::curso.curso",
+      "mappedBy": "categoria_2"
+    }
+  }
+}

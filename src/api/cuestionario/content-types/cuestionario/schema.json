@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuestionarios",
+  "info": {
+    "singularName": "cuestionario",
+    "pluralName": "cuestionarios",
+    "displayName": "cuestionario"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "categoria_3": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria-3.categoria-3",
+      "inversedBy": "cuestionarios"
+    },
+    "cursos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::curso.curso",
+      "inversedBy": "cuestionarios"
+    }
+  }
+}

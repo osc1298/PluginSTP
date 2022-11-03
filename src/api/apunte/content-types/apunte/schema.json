@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apuntes",
+  "info": {
+    "singularName": "apunte",
+    "pluralName": "apuntes",
+    "displayName": "Apunte"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "cursos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::curso.curso",
+      "inversedBy": "apuntes"
+    }
+  }
+}
