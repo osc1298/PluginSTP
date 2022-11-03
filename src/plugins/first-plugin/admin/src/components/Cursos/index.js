@@ -3,6 +3,7 @@ import { Field, FieldLabel,  FieldInput } from '@strapi/design-system/Field';
 import { Textarea } from '@strapi/design-system/Textarea';
 import { Box } from '@strapi/design-system/Box';
 import Seleccionar from './elements/selectores';
+import ListarItems from './elements/listarItems';
 import { Button } from '@strapi/design-system/Button';
 import axios from 'axios';
 const qs = require('qs');
@@ -196,6 +197,26 @@ function Curso(){
           <Seleccionar padres={padres} setValores={setValores} valores={valores}/>
           
         <Button onClick={añadirItems}>Añadir</Button>
+
+              <Box padding={8}>
+                  {
+                    cargarValores.length>0 ? 
+                    (
+                      <>
+                        {cargarValores.map((item)=>(
+                          <ListarItems padres={padres} valores={item}/>
+
+                        ))}
+                      </>
+                    ):
+                    (
+                      <>
+                      
+                      </>
+                    )
+                  }
+              </Box>
+
          </Box>
         </>
     )
